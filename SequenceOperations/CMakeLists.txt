@@ -2,6 +2,7 @@ add_library(SequenceOperations)
 target_sources(SequenceOperations
     PRIVATE
         sequence.cpp
+        dnasequence.cpp
 
     PUBLIC
         FILE_SET HEADERS
@@ -9,4 +10,5 @@ target_sources(SequenceOperations
             .
         FILES
             sequence.h
+            dnasequence.h
 )

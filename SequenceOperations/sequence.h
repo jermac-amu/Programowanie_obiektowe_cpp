@@ -1,20 +1,27 @@
 #pragma once
 
-#include <iostream>
 #include <fstream>
-#include <stdexcept>
+
+namespace SequenceOperations
+{
 
 class Sequence
 {
-    private:
+    protected:
         std::string header;
         std::string sequence;
+
+        void readFASTA(std::ifstream &file, std::string &output_sequence,
+                       std::string &output_header, const std::string &context);
 
     public:
         Sequence();
 
-        std::string get();
+        std::string get() const;
 
-        void readFromFASTA(std::ifstream file);
-        void readFromFASTA(std::string filename);
+        void readFromFASTA(std::ifstream &file);
+        void readFromFASTA(std::ifstream &&file);
+        void readFromFASTA(const std::string &filename);
 };
+
+} // close namespace SequenceOperations

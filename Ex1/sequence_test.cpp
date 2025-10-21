@@ -1,10 +1,13 @@
 #include <iostream>
 #include <sequence.h>
 
+using namespace SequenceOperations;
+
 int main()
 {
     Sequence seq = Sequence();
-    seq.readFromFASTA("Ex1/example_seq.fa");
+    std::cout << "\nA warning should follow:\n";
+    seq.readFromFASTA("resources/example_seq.fa");
 
     std::string strseq = seq.get();
     std::cout << strseq << '\n';
