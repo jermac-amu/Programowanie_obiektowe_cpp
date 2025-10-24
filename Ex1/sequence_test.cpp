@@ -1,5 +1,5 @@
 #include <iostream>
-#include <sequence.h>
+#include <Sequence.hpp>
 
 using namespace SequenceOperations;
 

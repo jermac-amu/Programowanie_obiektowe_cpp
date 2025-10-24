@@ -7,3 +7,13 @@ target_link_libraries(dnasequence_test
     PRIVATE
         SequenceOperations
 )
+
+add_executable(count_nucleotides)
+target_sources(count_nucleotides
+    PRIVATE
+        count_nucleotides.cpp
+)
+target_link_libraries(count_nucleotides
+    PRIVATE
+        SequenceOperations
+)
