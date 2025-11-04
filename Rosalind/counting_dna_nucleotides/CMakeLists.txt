@@ -1,13 +1,3 @@
-add_executable(dnasequence_test)
-target_sources(dnasequence_test
-    PRIVATE
-        dnasequence_test.cpp
-)
-target_link_libraries(dnasequence_test
-    PRIVATE
-        SequenceOperations
-)
-
 add_executable(count_nucleotides)
 target_sources(count_nucleotides
     PRIVATE

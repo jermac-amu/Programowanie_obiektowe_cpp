@@ -1,0 +1,39 @@
+add_executable(sequence_test)
+target_sources(sequence_test
+    PRIVATE
+        sequence_test.cpp
+)
+target_link_libraries(sequence_test
+    PRIVATE
+        SequenceOperations
+)
+
+add_executable(restricted_vocabulary_sequence_test)
+target_sources(restricted_vocabulary_sequence_test
+    PRIVATE
+        restricted_vocabulary_sequence_test.cpp
+)
+target_link_libraries(restricted_vocabulary_sequence_test
+    PRIVATE
+        SequenceOperations
+)
+
+add_executable(dnasequence_test)
+target_sources(dnasequence_test
+    PRIVATE
+        dnasequence_test.cpp
+)
+target_link_libraries(dnasequence_test
+    PRIVATE
+        SequenceOperations
+)
+
+add_executable(library_test)
+target_sources(library_test
+    PRIVATE
+        library_test.cpp
+)
+target_link_libraries(library_test
+    PRIVATE
+        LibraryManagement
+)
