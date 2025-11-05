@@ -20,12 +20,17 @@ void Worker::setJob(std::string &jobTitle)
     this->jobTitle = jobTitle;
 }
 
+void Worker::setJob(std::string &&jobTitle)
+{
+    setJob(jobTitle);
+}
+
 int Worker::getSalary() const
 {
     return this->salary;
 }
 
-void setSalary(int salary)
+void Worker::setSalary(int salary)
 {
     this->salary = salary;
 }

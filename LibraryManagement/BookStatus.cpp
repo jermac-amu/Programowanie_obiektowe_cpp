@@ -5,7 +5,7 @@
 namespace LibraryManagement
 {
 
-BookStatus::BookStatus(std::string &section, int shelf_number)
+BookStatus::BookStatus(const std::string &section, int shelf_number)
 {
     this->section = section;
     this->shelf_number = shelf_number;
@@ -24,7 +24,7 @@ int BookStatus::getShelfNumber() const
 
 std::string BookStatus::getLocation() const
 {
-    return "Section \"" + this->section + "\", shelf " + (const char*)this->shelf_number;
+    return "Section \"" + this->section + "\", shelf " + std::to_string(this->shelf_number);
 }
 
 bool BookStatus::getBorrowed() const
@@ -39,7 +39,7 @@ void BookStatus::borrowBook()
     else this->borrowed = true;
 }
 
-void returnBook()
+void BookStatus::returnBook()
 {
     if (this->borrowed) this->borrowed = false;
     else throw std::logic_error("Attempt to return book which was never borrowed.");

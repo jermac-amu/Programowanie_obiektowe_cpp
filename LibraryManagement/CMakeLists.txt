@@ -5,6 +5,8 @@ target_sources(LibraryManagement
         Worker.cpp
         Book.cpp
         BookStatus.cpp
+        LibraryBook.cpp
+        Library.cpp
 
     PUBLIC
         FILE_SET HEADERS
@@ -15,4 +17,6 @@ target_sources(LibraryManagement
             Worker.hpp
             Book.hpp
             BookStatus.hpp
+            LibraryBook.hpp
+            Library.hpp
 )

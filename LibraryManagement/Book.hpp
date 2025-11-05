@@ -12,10 +12,10 @@ class Book
         std::string author;
 
     public:
-        Book(std::string &title, std::string &author);
+        Book(const std::string &title, const std::string &author);
 
-        std::string getTitle();
-        std::string getAuthor();
-}
+        std::string getTitle() const;
+        std::string getAuthor() const;
+};
 
 } // close namespace LibraryManagement

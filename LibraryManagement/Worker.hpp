@@ -17,6 +17,7 @@ class Worker : public Human
 
         std::string getJob() const;
         void setJob(std::string &jobTitle);
+        void setJob(std::string &&jobTitle);
 
         int getSalary() const;
         void setSalary(int salary);

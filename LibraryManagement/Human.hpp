@@ -7,13 +7,17 @@ class Human
 {
     private:
         int age;
+        int pesel;
 
     public:
         Human();
 
-        int isAdult();
-        int pesel;
         void setAge(int newAge);
+        int getAge() const;
+        bool isAdult() const;
+
+        void setPesel(int pesel);
+        int getPesel() const;
 };
 
 } // close namespace LibraryManagement

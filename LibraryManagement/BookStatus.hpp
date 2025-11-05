@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 namespace LibraryManagement
 {
 
@@ -11,7 +13,7 @@ class BookStatus
         bool borrowed;
 
     public:
-        BookStatus(std::string &section, int shelf_number);
+        BookStatus(const std::string &section, int shelf_number);
 
         std::string getSection() const;
         int getShelfNumber() const;
@@ -20,6 +22,6 @@ class BookStatus
 
         void borrowBook();
         void returnBook();
-}
+};
 
 } // close namespace LibraryManagement
