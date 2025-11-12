@@ -1,11 +1,5 @@
 #include "DNASequence.hpp"
 
-#include <iostream>
-#include <fstream>
-#include <map>
-#include <algorithm>
-#include <stdexcept>
-
 namespace SequenceOperations
 {
 

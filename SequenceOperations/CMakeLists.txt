@@ -2,8 +2,9 @@ add_library(SequenceOperations)
 target_sources(SequenceOperations
     PRIVATE
         Sequence.cpp
-        DNASequence.cpp
         RestrictedVocabularySequence.cpp
+        RNASequence.cpp
+        DNASequence.cpp
 
     PUBLIC
         FILE_SET HEADERS
@@ -11,6 +12,7 @@ target_sources(SequenceOperations
             .
         FILES
             Sequence.hpp
-            DNASequence.hpp
             RestrictedVocabularySequence.hpp
+            RNASequence.hpp
+            DNASequence.hpp
 )

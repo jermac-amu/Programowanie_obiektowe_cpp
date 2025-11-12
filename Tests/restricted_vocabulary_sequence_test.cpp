@@ -19,14 +19,21 @@ int main()
     }
 
     Sequence* seqptr;
-    RestrictedVocabularySequence otherseq("ATCGatcg");
+    RestrictedVocabularySequence otherseq("ATCG", false);
 
     std::cout << "\n2 warnings should follow:\n";
     seqptr = &otherseq;
 
-    seqptr->readFromFASTA("resources/example_seq.fa"); // Warning from base class method
+    otherseq.readFromFASTA("resources/dna_seq2.fa"); // Warning from derived class method
     std::cout << '\n';
-    otherseq.readFromFASTA("resources/example_seq.fa"); // Warning from derived class method
+    seqptr->readFromFASTA("resources/dna_seq.fa"); // Warning from base class method
+
+    std::cout << '\n' << otherseq.get() << '\n';
+    charcounts = otherseq.getCharCount();
+    for(const auto& elem : charcounts)
+    {
+        std::cout << elem.first << " " << elem.second  << "\n";
+    }
 
     std::cout << "\nAn error should follow:\n";
     otherseq.readFromFASTA("resources/custom_sequence.fa");

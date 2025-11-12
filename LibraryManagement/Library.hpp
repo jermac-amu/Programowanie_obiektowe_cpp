@@ -11,18 +11,19 @@ namespace LibraryManagement
 class Library
 {
     private:
-        std::map<std::string, LibraryBook> books;
-        std::map<std::string, Worker> workers;
+        std::map<std::string, LibraryBook> books = {};
+        std::map<std::string, Worker> workers = {};
 
     public:
         Library();
 
         void addBook(LibraryBook book);
-        LibraryBook getBook(std::string title) const;
-        void borrowBook(std::string title);
-        void returnBook(std::string title);
+        const LibraryBook& getBook(const std::string &isbn) const;
+        void borrowBook(const std::string &isbn);
+        void returnBook(const std::string &isbn);
 
-        //void addWorker(Worker worker);
-}
+        void addWorker(Worker worker);
+        const Worker& getWorker(std::string pesel) const;
+};
 
 } // close namespace LibraryManagement

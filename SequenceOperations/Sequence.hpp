@@ -24,6 +24,9 @@ class Sequence
         Sequence();
 
         std::string get() const;
+        std::string getHeader() const;
+
+        void setHeader(const std::string &header);
 
         void readFromFASTA(std::ifstream &file);
         void readFromFASTA(std::ifstream &&file);

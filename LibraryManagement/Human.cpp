@@ -1,4 +1,5 @@
 #include "Human.hpp"
+#include <iostream>
 
 namespace LibraryManagement
 {
@@ -6,7 +7,7 @@ namespace LibraryManagement
 Human::Human()
 {
     this->age = 0;
-    this->pesel = 0;
+    this->pesel = "0";
 }
 
 bool Human::isAdult() const
@@ -24,12 +25,17 @@ int Human::getAge() const
     return this->age;
 }
 
-void Human::setPesel(int pesel)
+void Human::setPesel(std::string pesel)
 {
     this->pesel = pesel;
 }
 
-int Human::getPesel() const
+void Human::setPesel(int pesel)
+{
+    this->pesel = std::to_string(pesel);
+}
+
+std::string Human::getPesel() const
 {
     return this->pesel;
 }

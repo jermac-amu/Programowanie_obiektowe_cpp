@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 namespace LibraryManagement
 {
 
@@ -7,7 +9,7 @@ class Human
 {
     private:
         int age;
-        int pesel;
+        std::string pesel;
 
     public:
         Human();
@@ -16,8 +18,9 @@ class Human
         int getAge() const;
         bool isAdult() const;
 
+        void setPesel(std::string pesel);
         void setPesel(int pesel);
-        int getPesel() const;
+        std::string getPesel() const;
 };
 
 } // close namespace LibraryManagement

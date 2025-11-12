@@ -18,6 +18,16 @@ target_link_libraries(restricted_vocabulary_sequence_test
         SequenceOperations
 )
 
+add_executable(rnasequence_test)
+target_sources(rnasequence_test
+    PRIVATE
+        rnasequence_test.cpp
+)
+target_link_libraries(rnasequence_test
+    PRIVATE
+        SequenceOperations
+)
+
 add_executable(dnasequence_test)
 target_sources(dnasequence_test
     PRIVATE

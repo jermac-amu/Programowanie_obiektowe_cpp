@@ -13,8 +13,8 @@ class LibraryBook : public Book
         BookStatus* status = NULL;
 
     public:
-        LibraryBook(const std::string &title, const std::string &author, const std::string &section, int shelf_number);
-        //LibraryBook(std::string &&title, std::string &&author, std::string &&section, int shelf_number);
+        LibraryBook(const std::string &title, const std::string &author, const std::string &isbn,
+                    const std::string &section, int shelf_number);
         LibraryBook(const Book &book, const std::string &section, int shelf_number);
 
         BookStatus getStatus() const;

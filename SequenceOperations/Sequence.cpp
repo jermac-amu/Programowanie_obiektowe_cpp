@@ -90,6 +90,16 @@ std::string Sequence::get() const
     return this->sequence;
 }
 
+std::string Sequence::getHeader() const
+{
+    return this->header;
+}
+
+void Sequence::setHeader(const std::string &header)
+{
+    this->header = header;
+}
+
 void Sequence::readFromFASTA(std::ifstream &file)
 {
     readFile(file, this->sequence, this->header, getClassName() + "::readFromFASTA", "fa");

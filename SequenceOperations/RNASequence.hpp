@@ -1,20 +1,22 @@
 #pragma once
 #include "RestrictedVocabularySequence.hpp"
+#include "DNASequence.hpp"
 #include <iostream>
 
 namespace SequenceOperations
 {
 
-class DNASequence: public RestrictedVocabularySequence
+class RNASequence: public RestrictedVocabularySequence
 {
     private:
         virtual std::string getClassName() const override
-            {return "SequenceOperations::DNASequence";}
+            {return "SequenceOperations::RNASequence";}
 
     public:
-        DNASequence();
+        RNASequence();
 
         int countNucleotide(char nucl) const;
+        void transcribeFromDNA(const DNASequence &dna);
 };
 
 } // Close namespace SequenceOperations

@@ -6,8 +6,9 @@
 namespace LibraryManagement
 {
 
-LibraryBook::LibraryBook(const std::string &title, const std::string &author, const std::string &section, int shelf_number) :
-    Book(title, author)
+LibraryBook::LibraryBook(const std::string &title, const std::string &author, const std::string &isbn,
+                         const std::string &section, int shelf_number) :
+    Book(title, author, isbn)
     // Delegates to base class constructor
 {
     BookStatus tmpstatus = BookStatus(section, shelf_number);
@@ -18,13 +19,13 @@ LibraryBook::LibraryBook(const std::string &title, const std::string &author, co
 //    LibraryBook(title, author, section, shelf_number) {}
 
 LibraryBook::LibraryBook(const Book &book, const std::string &section, int shelf_number) :
-    LibraryBook(book.getTitle(), book.getAuthor(), section, shelf_number) {}
+    LibraryBook(book.getTitle(), book.getAuthor(), book.getISBN(), section, shelf_number) {}
     // Delegates to constructor LibraryBook(string, string, string, int)
 
 
 BookStatus LibraryBook::getStatus() const
 {
-    return this->status;
+    return *(this->status);
 }
 
 std::string LibraryBook::getSection() const

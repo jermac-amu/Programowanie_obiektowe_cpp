@@ -7,35 +7,36 @@
 namespace LibraryManagement
 {
 
-Library::Library()
-{
-    this->books = std::map<std::string, LibraryBook>;
-    this->workers = std::map<std::string, Worker>;
-}
+Library::Library(){}
 
 void Library::addBook(LibraryBook book)
 {
     this->books.emplace(book.getTitle(), book);
 }
 
-LibraryBook Library::getBook(std::string title) const
+const LibraryBook& Library::getBook(const std::string &isbn) const
 {
-    return this->books[title];
+    return this->books.at(isbn);
 }
 
-void Library::borrowBook(std::string title)
+void Library::borrowBook(const std::string &isbn)
 {
-    this->books[title].borrowBook();
+    this->books.at(isbn).borrowBook();
 }
 
-void Library::returnBook(std::string title)
+void Library::returnBook(const std::string &isbn)
 {
-    this->books[title].returnBook();
+    this->books.at(isbn).returnBook();
 }
 
-/*void Library::addWorker(Worker)
+void Library::addWorker(Worker worker)
 {
-    this->books.emplace(book.getTitle(), book);
-}*/
+    this->workers.emplace(worker.getPesel(), worker);
+}
+
+const Worker& Library::getWorker(std::string pesel) const
+{
+    return this->workers.at(pesel);
+}
 
 } // close namespace LibraryManagement
