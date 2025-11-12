@@ -1,0 +1,9 @@
+add_executable(revcomplement)
+target_sources(revcomplement
+    PRIVATE
+        revcomplement.cpp
+)
+target_link_libraries(revcomplement
+    PRIVATE
+        SequenceOperations
+)

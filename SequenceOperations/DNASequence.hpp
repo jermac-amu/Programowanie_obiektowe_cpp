@@ -15,6 +15,7 @@ class DNASequence: public RestrictedVocabularySequence
         DNASequence();
 
         int countNucleotide(char nucl) const;
+        void revComplementFromDNA(DNASequence dna);
 };
 
 } // Close namespace SequenceOperations
