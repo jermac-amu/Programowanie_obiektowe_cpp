@@ -1,0 +1,9 @@
+add_executable(transcribe)
+target_sources(transcribe
+    PRIVATE
+        transcribe.cpp
+)
+target_link_libraries(transcribe
+    PRIVATE
+        SequenceOperations
+)
