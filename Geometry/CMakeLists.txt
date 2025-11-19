@@ -6,6 +6,8 @@ target_sources(Geometry
         Triangle.cpp
         Rectangle.cpp
         Square.cpp
+        Circle.cpp
+        RegularPentagon.cpp
 
     PUBLIC
         FILE_SET HEADERS
@@ -16,4 +18,6 @@ target_sources(Geometry
             Triangle.hpp
             Rectangle.hpp
             Square.hpp
+            Circle.hpp
+            RegularPentagon.hpp
 )

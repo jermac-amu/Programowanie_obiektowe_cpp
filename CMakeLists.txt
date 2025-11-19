@@ -9,3 +9,13 @@ add_subdirectory(Rosalind/counting_dna_nucleotides)
 add_subdirectory(Rosalind/transcribing_dna_into_rna)
 add_subdirectory(Rosalind/complementing_a_strand_of_dna)
 add_subdirectory(Geometry)
+
+add_executable(figure_area)
+target_sources(figure_area
+    PRIVATE
+        figure_area.cpp
+)
+target_link_libraries(figure_area
+    PRIVATE
+        Geometry
+)
