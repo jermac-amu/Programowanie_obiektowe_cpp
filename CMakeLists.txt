@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.31)
+set (CMAKE_CXX_STANDARD 20)
 project(ProgramowanieObiektowe)
 
 add_subdirectory(Ex1)
@@ -9,6 +10,8 @@ add_subdirectory(Rosalind/counting_dna_nucleotides)
 add_subdirectory(Rosalind/transcribing_dna_into_rna)
 add_subdirectory(Rosalind/complementing_a_strand_of_dna)
 add_subdirectory(Geometry)
+add_subdirectory(Conway)
+add_subdirectory(Tools)
 
 add_executable(figure_area)
 target_sources(figure_area

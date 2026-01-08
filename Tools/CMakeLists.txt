@@ -1,0 +1,9 @@
+add_executable(conway_run)
+target_sources(conway_run
+    PRIVATE
+        conway_run.cpp
+)
+target_link_libraries(conway_run
+    PRIVATE
+        Conway
+)
