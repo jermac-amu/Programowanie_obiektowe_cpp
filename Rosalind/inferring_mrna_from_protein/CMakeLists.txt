@@ -1,0 +1,9 @@
+add_executable(protein_matrices)
+target_sources(protein_matrices
+    PRIVATE
+        protein_matrices.cpp
+)
+target_link_libraries(protein_matrices
+    PRIVATE
+        SequenceOperations
+)

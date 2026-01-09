@@ -14,7 +14,7 @@ class AASequence: public RestrictedVocabularySequence
             {return "SequenceOperations::AASequence";}
 
     public:
-        const std::map<std::string, char> codon_table =
+        static const inline std::map<std::string, char> codon_table =
         {
             {"UUU", 'F'},{"CUU", 'L'},{"AUU", 'I'},{"GUU", 'V'},
             {"UUC", 'F'},{"CUC", 'L'},{"AUC", 'I'},{"GUC", 'V'},
