@@ -5,6 +5,7 @@ target_sources(SequenceOperations
         RestrictedVocabularySequence.cpp
         RNASequence.cpp
         DNASequence.cpp
+        AASequence.cpp
 
     PUBLIC
         FILE_SET HEADERS
@@ -15,4 +16,5 @@ target_sources(SequenceOperations
             RestrictedVocabularySequence.hpp
             RNASequence.hpp
             DNASequence.hpp
+            AASequence.hpp
 )

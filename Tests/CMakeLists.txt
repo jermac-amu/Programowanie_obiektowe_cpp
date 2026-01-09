@@ -38,6 +38,16 @@ target_link_libraries(dnasequence_test
         SequenceOperations
 )
 
+add_executable(aasequence_test)
+target_sources(aasequence_test
+    PRIVATE
+        aasequence_test.cpp
+)
+target_link_libraries(aasequence_test
+    PRIVATE
+        SequenceOperations
+)
+
 add_executable(library_test)
 target_sources(library_test
     PRIVATE

@@ -1,0 +1,9 @@
+add_executable(translate)
+target_sources(translate
+    PRIVATE
+        translate.cpp
+)
+target_link_libraries(translate
+    PRIVATE
+        SequenceOperations
+)
