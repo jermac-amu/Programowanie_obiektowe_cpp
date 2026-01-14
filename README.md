@@ -16,28 +16,32 @@ Ready-to-run files can then be found in `./build` under their corresponding subd
 
 A singular target can be built through following command:
 `cmake --build build --target <target_name>`
-For example
+<br/>For example
 `cmake --build build --target SequenceOperations`
 
 #### Libraries
-Library headers can be included like:
+Linked libraries can be included like:
 ```c++
-#include <class.hpp>
+#include <library_name>
+// OR
+#include <library_name/class_name.hpp>
 ```
 
- - SequenceOperations - A library handling the processing of DNA, RNA, Aminoacid as well as other types of sequences.
+- SequenceOperations - A library handling the processing of DNA, RNA, Aminoacid as well as other types of sequences.
   <details>
-      Available classes:
-      - `Sequence.hpp`
-      - `RestrictedVocabularySequence.hpp`
-      - `DNASequence.hpp`
-      - `RNASequence.hpp`
-      - `AASequence.hpp`
+    <summary>Available classes:</summary>
+    
+    - `Sequence.hpp`
+    - `RestrictedVocabularySequence.hpp`
+    - `DNASequence.hpp`
+    - `RNASequence.hpp`
+    - `AASequence.hpp`
   </details>
   
 - LibraryManagement - A library for managing literal libraries.
   <details>    
-    Available classes:
+    <summary>Available classes:</summary>
+   
     - `Human.hpp`
     - `Worker.hpp`
     - `Book.hpp`
@@ -45,7 +49,42 @@ Library headers can be included like:
     - `LibraryBook.hpp`
     - `Library.hpp`
   </details>
-- Geometry - A library exposing a set of classes symbolizing geometric figures.
+
+- Geometry - A library exposing a set of classes which symbolize geometric figures.
   <details>
-    Available classes:
+    <summary>Available classes:</summary>
+  
+    - `Shape.hpp`
+    - `Triangle.hpp`
+    - `Rectangle.hpp`
+    - `Square.hpp`
+    - `RegularPentagon.hpp`
+    - `Circle.hpp`
   </details>
+
+- Conway - A library implementing Conway's Game of Life.
+  <details>
+    <summary>Available classes:</summary>
+
+   - `Cell.hpp`
+   - `Map.hpp`
+  </details>
+
+#### Tools
+
+- `figure_area` - An interactive tool capable of calculating areas of some geometric figures.
+  <details>
+    <summary>Path:</summary>
+
+    `<build>/Tools/figure_area`
+  </details>
+
+- `conway_run` - A tool which fetches initial configuration from specified setup file and simulates Conway's Game of Life. Example setup file can be found in `/resources/conway_setup.txt`
+  <details>
+    <summary>Path:</summary>
+
+    `<build>/Tools/conway_run`
+  </details>
+
+#### Tests
+A variety of unit tests can be found in `<build>/Tests/`
