@@ -100,6 +100,30 @@ void Sequence::setHeader(const std::string &header)
     this->header = header;
 }
 
+std::vector<int> Sequence::findMotif(const Sequence &motif) const
+{
+    std::vector<int> positions;
+    int m_size = motif.get().size();
+
+    std::string mot = motif.get();
+    std::string seq = this->get();
+
+    std::string::const_iterator s = seq.cbegin();
+    std::string::const_iterator m = mot.cbegin();
+
+    for (; s+m_size-1 < seq.cend(); s++)
+    {
+        std::string ahead(s, s+m_size);
+
+        if (ahead == motif.get())
+        {
+            positions.emplace_back(std::distance(seq.cbegin(), s)+1);
+        }
+    }
+
+    return positions;
+}
+
 void Sequence::readFromFASTA(std::ifstream &file)
 {
     readFile(file, this->sequence, this->header, getClassName() + "::readFromFASTA", "fa");

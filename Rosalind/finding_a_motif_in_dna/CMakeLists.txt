@@ -1,0 +1,9 @@
+add_executable(find_motif)
+target_sources(find_motif
+    PRIVATE
+        find_motif.cpp
+)
+target_link_libraries(find_motif
+    PRIVATE
+        SequenceOperations
+)

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <fstream>
+#include <vector>
 
 namespace SequenceOperations
 {
@@ -27,6 +28,8 @@ class Sequence
         std::string getHeader() const;
 
         void setHeader(const std::string &header);
+
+        std::vector<int> findMotif(const Sequence &motif) const;
 
         void readFromFASTA(std::ifstream &file);
         void readFromFASTA(std::ifstream &&file);
