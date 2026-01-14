@@ -14,13 +14,3 @@ add_subdirectory(Rosalind/inferring_mrna_from_protein)
 add_subdirectory(Geometry)
 add_subdirectory(Conway)
 add_subdirectory(Tools)
-
-add_executable(figure_area)
-target_sources(figure_area
-    PRIVATE
-        figure_area.cpp
-)
-target_link_libraries(figure_area
-    PRIVATE
-        Geometry
-)

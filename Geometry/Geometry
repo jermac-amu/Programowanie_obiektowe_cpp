@@ -1,0 +1,7 @@
+#pragma once
+#include "include/Geometry/Shape.hpp"
+#include "include/Geometry/Triangle.hpp"
+#include "include/Geometry/Rectangle.hpp"
+#include "include/Geometry/Square.hpp"
+#include "include/Geometry/RegularPentagon.hpp"
+#include "include/Geometry/Circle.hpp"

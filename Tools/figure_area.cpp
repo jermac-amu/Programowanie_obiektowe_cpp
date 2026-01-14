@@ -1,12 +1,7 @@
 #include <iostream>
-#include <Shape.hpp>
-#include <Triangle.hpp>
-#include <Square.hpp>
-#include <Rectangle.hpp>
-#include <Circle.hpp>
-#include <RegularPentagon.hpp>
+#include <Geometry>
 
-using namespace Geometry;
+namespace geom = Geometry;
 
 int main()
 {
@@ -16,7 +11,7 @@ int main()
     std::cout << "Podaj liczbę wierzchołków figury: ";
     std::cin >> vert;
 
-    Shape *f = NULL;
+    geom::Shape *f = NULL;
 
     if (vert < 0 || (vert > 5 && vert < 1000)) // Not supported
     {
@@ -38,7 +33,7 @@ int main()
         std::cout << "Podaj długość wysokości: ";
         std::cin >> height;
 
-        f = new Triangle(length, height);
+        f = new geom::Triangle(length, height);
 
         std::cout << "\nPole powierzchni trójkąta: " << f->calcArea() << std::endl;
         delete f;
@@ -61,7 +56,7 @@ int main()
                 std::cout << "Podaj długość boku kwadratu: ";
                 std::cin >> length;
 
-                f = new Square(length);
+                f = new geom::Square(length);
 
                 std::cout << "\nPole powierzchni kwadratu: ";
                 break;
@@ -78,7 +73,7 @@ int main()
                 std::cout << "Podaj długość prostopadłego boku: ";
                 std::cin >> length2;
 
-                f = new Rectangle(length1, length2);
+                f = new geom::Rectangle(length1, length2);
 
                 std::cout << "\nPole powierzchni prostokąta: ";
                 break;
@@ -98,7 +93,7 @@ int main()
         std::cout << "Podaj długość boku pięciokąta (foremnego): ";
         std::cin >> length;
 
-        f = new RegularPentagon(length);
+        f = new geom::RegularPentagon(length);
 
         std::cout << "\nPole powierzchni pięciokąta (foremnego): " << f->calcArea() << '\n';
 
@@ -115,7 +110,7 @@ int main()
         std::cout << "Podaj promień koła: ";
         std::cin >> radius;
 
-        f = new Circle(radius);
+        f = new geom::Circle(radius);
         std::cout << "\nPole powierzchni koła: " << f->calcArea() << '\n';
 
         delete f;

@@ -1,13 +1,13 @@
-#include <Sequence.hpp>
-#include <RestrictedVocabularySequence.hpp>
+#include <SequenceOperations/Sequence.hpp>
+#include <SequenceOperations/RestrictedVocabularySequence.hpp>
 
 #include <iostream>
 
-using namespace SequenceOperations;
+namespace so = SequenceOperations;
 
 int main()
 {
-    RestrictedVocabularySequence seq("abcdefg");
+    so::RestrictedVocabularySequence seq("abcdefg");
     seq.readFromFASTA("resources/custom_sequence.fa");
 
     std::cout << seq.get() << '\n';
@@ -18,8 +18,8 @@ int main()
         std::cout << elem.first << " " << elem.second  << "\n";
     }
 
-    Sequence* seqptr;
-    RestrictedVocabularySequence otherseq("ATCG", false);
+    so::Sequence* seqptr;
+    so::RestrictedVocabularySequence otherseq("ATCG", false);
 
     std::cout << "\n2 warnings should follow:\n";
     seqptr = &otherseq;

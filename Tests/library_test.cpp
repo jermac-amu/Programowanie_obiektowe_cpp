@@ -1,19 +1,19 @@
 #include <iostream>
-#include "Human.hpp"
-#include "Worker.hpp"
+#include <LibraryManagement/Human.hpp>
+#include <LibraryManagement/Worker.hpp>
 
-using namespace LibraryManagement;
+namespace lm = LibraryManagement;
 
 int main()
 {
-    Human h = Human();
+    lm::Human h = lm::Human();
     h.setAge(18);
     h.setAge(8);
     h.setPesel(123);
 
     std::cout << "Age of the human: " << h.getAge() << '\n';
 
-    Worker w = Worker();
+    lm::Worker w = lm::Worker();
     w.setJob("Bibliotekarz");
     w.setPesel(899);
     w.setSalary(4000);

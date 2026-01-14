@@ -1,6 +1,6 @@
 #include <iostream>
-#include <AASequence.hpp>
-#include <RNASequence.hpp>
+#include <SequenceOperations/AASequence.hpp>
+#include <SequenceOperations/RNASequence.hpp>
 
 using namespace SequenceOperations;
 

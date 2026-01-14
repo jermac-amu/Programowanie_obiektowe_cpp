@@ -1,6 +1,6 @@
 #include <iostream>
-#include <RNASequence.hpp>
-#include <DNASequence.hpp>
+#include <SequenceOperations/RNASequence.hpp>
+#include <SequenceOperations/DNASequence.hpp>
 
 using namespace SequenceOperations;
 

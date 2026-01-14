@@ -2,7 +2,7 @@
 #include <fstream>
 #include <filesystem>
 
-#include <DNASequence.hpp>
+#include <SequenceOperations/DNASequence.hpp>
 
 using namespace SequenceOperations;
 

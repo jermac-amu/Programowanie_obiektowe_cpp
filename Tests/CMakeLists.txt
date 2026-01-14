@@ -57,3 +57,13 @@ target_link_libraries(library_test
     PRIVATE
         LibraryManagement
 )
+
+add_executable(sequence_operations_test)
+target_sources(sequence_operations_test
+    PRIVATE
+        sequence_operations_test.cpp
+)
+target_link_libraries(sequence_operations_test
+    PRIVATE
+        SequenceOperations
+)

@@ -1,4 +1,4 @@
-#include <RegularPentagon.hpp>
+#include "RegularPentagon.hpp"
 #include <iostream>
 
 namespace Geometry

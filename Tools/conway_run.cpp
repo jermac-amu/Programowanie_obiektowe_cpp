@@ -4,8 +4,7 @@
 #include <chrono>
 #include <thread>
 
-#include <Map.hpp>
-#include <Cell.hpp>
+#include <Conway>
 
 using namespace Conway;
 

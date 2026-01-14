@@ -1,11 +1,11 @@
 #include <iostream>
-#include <DNASequence.hpp>
+#include <SequenceOperations/DNASequence.hpp>
 
-using namespace SequenceOperations;
+namespace so = SequenceOperations;
 
 int main()
 {
-    DNASequence dna;
+    so::DNASequence dna;
     std::cout << "\nA warning should follow:\n";
     dna.readFromFASTA("resources/dna_seq.fa");
 

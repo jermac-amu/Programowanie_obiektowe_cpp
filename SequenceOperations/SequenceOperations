@@ -1,0 +1,6 @@
+#pragma once
+#include "include/SequenceOperations/Sequence.hpp"
+#include "include/SequenceOperations/RestrictedVocabularySequence.hpp"
+#include "include/SequenceOperations/DNASequence.hpp"
+#include "include/SequenceOperations/RNASequence.hpp"
+#include "include/SequenceOperations/AASequence.hpp"

@@ -1,3 +1,13 @@
+add_executable(figure_area)
+target_sources(figure_area
+    PRIVATE
+        figure_area.cpp
+)
+target_link_libraries(figure_area
+    PRIVATE
+        Geometry
+)
+
 add_executable(conway_run)
 target_sources(conway_run
     PRIVATE

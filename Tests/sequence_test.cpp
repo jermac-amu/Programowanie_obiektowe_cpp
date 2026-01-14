@@ -1,11 +1,11 @@
 #include <iostream>
-#include <Sequence.hpp>
+#include <SequenceOperations/Sequence.hpp>
 
-using namespace SequenceOperations;
+namespace so = SequenceOperations;
 
 int main()
 {
-    Sequence seq = Sequence();
+    so::Sequence seq = so::Sequence();
     seq.readFromText("resources/dna_seq.txt");
 
     std::cout << "\nA warning should follow:\n";

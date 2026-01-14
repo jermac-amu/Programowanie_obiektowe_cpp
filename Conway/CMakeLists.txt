@@ -2,14 +2,21 @@ add_library(Conway)
 
 target_sources(Conway
     PRIVATE
-        Cell.cpp
-        Map.cpp
+        include/Conway/Cell.cpp
+        include/Conway/Map.cpp
 
     PUBLIC
         FILE_SET HEADERS
         BASE_DIRS
+            include
+        FILES
+            include/Conway/Cell.hpp
+            include/Conway/Map.hpp
+
+        FILE_SET main_header
+        TYPE HEADERS
+        BASE_DIRS
             .
         FILES
-            Cell.hpp
-            Map.hpp
+            Conway
 )

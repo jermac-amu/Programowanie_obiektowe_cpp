@@ -2,8 +2,8 @@
 #include <fstream>
 #include <filesystem>
 
-#include <DNASequence.hpp>
-#include <RNASequence.hpp>
+#include <SequenceOperations/DNASequence.hpp>
+#include <SequenceOperations/RNASequence.hpp>
 
 using namespace SequenceOperations;
 

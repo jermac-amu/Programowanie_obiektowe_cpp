@@ -2,8 +2,8 @@
 #include <fstream>
 #include <filesystem>
 
-#include <RNASequence.hpp>
-#include <AASequence.hpp>
+#include <SequenceOperations/RNASequence.hpp>
+#include <SequenceOperations/AASequence.hpp>
 
 using namespace SequenceOperations;
 
