@@ -27,7 +27,7 @@ Linked libraries can be included like:
 #include <library_name/class_name.hpp>
 ```
 
-- SequenceOperations - A library handling the processing of DNA, RNA, Aminoacid as well as other types of sequences.
+- `SequenceOperations` - A library handling the processing of DNA, RNA, Aminoacid as well as other types of sequences.
   <details>
     <summary>Available classes:</summary>
     
@@ -38,7 +38,7 @@ Linked libraries can be included like:
     - `AASequence.hpp`
   </details>
   
-- LibraryManagement - A library for managing literal libraries.
+- `LibraryManagement` - A library for managing literal libraries.
   <details>    
     <summary>Available classes:</summary>
    
@@ -50,7 +50,7 @@ Linked libraries can be included like:
     - `Library.hpp`
   </details>
 
-- Geometry - A library exposing a set of classes which symbolize geometric figures.
+- `Geometry` - A library exposing a set of classes which symbolize geometric figures.
   <details>
     <summary>Available classes:</summary>
   
@@ -62,7 +62,7 @@ Linked libraries can be included like:
     - `Circle.hpp`
   </details>
 
-- Conway - A library implementing Conway's Game of Life.
+- `Conway` - A library implementing Conway's Game of Life.
   <details>
     <summary>Available classes:</summary>
 
